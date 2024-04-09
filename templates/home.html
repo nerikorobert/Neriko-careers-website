@@ -18,27 +18,42 @@
 </head>
 
 <body>
+    {% include 'nav.html' %}
+
     <div class="container">
         <h1 class="text-center mt-2 mb-4">Neriko Careers</h1>
 
         <img class="img-fluid" id="banner" src="http://localhost:5000/static/pexels-cottonbro-studio-4065892.jpg">
         <h2 class="text-center">About Neriko's</h2>
-        <p class="lead">A career website serves as a gateway for individuals seeking employment opportunities and
-            organizations
-            looking
-            to hire talent. These platforms provide a comprehensive range of resources,
-            including job listings,
-            company profiles,
-            and career advice. Users can explore various industries,
-            roles,
-            and locations,
-            tailoring their search to match their skills and aspirations. For job seekers,
-            career websites offer a streamlined approach to finding employment. They can create profiles,
-            upload resumes,
-            and apply for positions directly through the platform. Additionally,
-            these sites often feature tools to help users assess their skills,
-            explore new career paths,
-            and connect with industry professionals.</p>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+
+
+                <p class="lead">A career website serves as a gateway for individuals seeking employment
+                    opportunities and
+                    organizations
+                    looking
+                    to hire talent. These platforms provide a comprehensive range of resources,
+                    including job listings,
+                    company profiles,
+                    and career advice. Users can explore various industries,
+                    roles,
+                    and locations,
+                    tailoring their search to match their skills and aspirations. For job seekers,
+                    career websites offer a streamlined approach to finding employment. They can create profiles,
+                    upload resumes,
+                    and apply for positions directly through the platform. Additionally,
+                    these sites often feature tools to help users assess their skills,
+                    explore new career paths,
+                    and connect with industry professionals.
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+
+                <img src="/static/annie-spratt-QckxruozjRg-unsplash.jpg" style="height: 320px;border-radius: 4px;">
+            </div>
+        </div>
+
         <h2 class="text-center mt-2 mb-4">Open positions</h2>
         <div>
             {% for job in jobs %}
@@ -50,9 +65,10 @@
         </div>
         <div class="text-center">
             <button class="btn btn-primary btn-lg">Contact Us</button>
-            <p class="mt-4">Copyright 2024, Neriko</p>
         </div>
     </div>
+
+    {% include 'footer.html' %}
 </body>
 
 </html>
